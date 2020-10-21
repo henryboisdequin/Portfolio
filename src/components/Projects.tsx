@@ -29,7 +29,7 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
         <Heading mb={4}>Projects</Heading>
         <Flex flexDirection="column">
           {projects.map((v) => {
-            return <Card project={v}></Card>;
+            return <Card project={v as any}></Card>;
           })}
         </Flex>
       </Box>

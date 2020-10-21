@@ -2,17 +2,18 @@ import { Stack } from "@chakra-ui/core";
 import React from "react";
 import { Feature } from "./Feature";
 
-// ? Need help with this
-// interface ProjectType {
-//   title: string;
-//   desc: string;
-//   githubLink: string;
-//   imageLink: string;
-//   website?: string;
-// }
+interface ProjectType {
+  bg: string;
+  icons: Array<string>;
+  title: string;
+  desc: string;
+  githubLink: string;
+  imageLink: string;
+  website?: string;
+}
 
 interface CardProps {
-  project: any;
+  project: ProjectType;
 }
 
 export const Card: React.FC<CardProps> = ({ project }) => {
