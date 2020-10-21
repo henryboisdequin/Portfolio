@@ -11,7 +11,6 @@ import React from "react";
 
 export function Feature({ title, desc, image, icons, bg, github }) {
   const { colorMode } = useColorMode();
-  console.log(desc);
 
   return (
     <Box
