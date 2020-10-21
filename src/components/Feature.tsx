@@ -19,7 +19,7 @@ export function Feature({ title, desc, image, icons, bg, github }) {
       shadow="md"
       mt={4}
       overflow="hidden"
-      maxW="auto"
+      maxW="800px"
       borderWidth="1px"
       rounded="lg"
       bg={bg}
@@ -51,7 +51,7 @@ export function Feature({ title, desc, image, icons, bg, github }) {
           </Text>
 
           <Flex>
-            {icons.map((v: any) => {
+            {icons.map((v: { color: string; name: string }) => {
               return (
                 <Box
                   mr={5}
@@ -62,6 +62,7 @@ export function Feature({ title, desc, image, icons, bg, github }) {
                 >
                   <Text
                     textAlign="center"
+                    fontFamily="monospace"
                     color={colorMode === "light" ? "#383735" : "#383735"}
                   >
                     {v.name}
@@ -72,7 +73,7 @@ export function Feature({ title, desc, image, icons, bg, github }) {
           </Flex>
         </Box>
         <Box>
-          <Image src={image} alt={image}></Image>
+          <Image src={image} borderRadius={10} shadow="md" alt={image}></Image>
         </Box>
       </Flex>
     </Box>
