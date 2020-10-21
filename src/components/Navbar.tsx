@@ -55,12 +55,11 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
         alignItems="center"
         flexGrow={1}
       >
-        <NextLink href="/contact">
+        <a href="mailto:boisdequinhenry19@gmail.com">
           <Link>
             <MenuItems>Contact</MenuItems>
           </Link>
-        </NextLink>
-
+        </a>
         <NextLink href="/blog/home">
           <Link>
             <MenuItems>Blog</MenuItems>

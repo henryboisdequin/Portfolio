@@ -5,6 +5,7 @@ import { Card } from "./Card";
 
 const projects: Array<object> = [
   {
+    //   TODO: add blog picture
     bg: "teal.400",
     title: "Blog",
     desc:
@@ -18,6 +19,50 @@ const projects: Array<object> = [
       { name: "GraphQL", color: "pink.300" },
       { name: "PostgreSQL", color: "orange.300" },
       { name: "URQL", color: "green.400" },
+    ],
+  },
+  {
+    bg: "teal.400",
+    title: "AI Stock Trader",
+    desc:
+      "Created an DQN AI Agent which chooses to sell, buy, or keep stocks from various companies. This DQN AI Agent is built using Tensorflow, Numpy, Pandas, and the reinforcement learning algorithm.",
+    githubLink: "https://github.com/henryboisdequin/AI-Stock-Trader",
+    imageLink:
+      "https://raw.githubusercontent.com/henryboisdequin/AI-Stock-Trader/master/test.png",
+    icons: [
+      { name: "Python", color: "blue.300" },
+      { name: "Tensorflow", color: "green.400" },
+      { name: "Numpy", color: "purple.300" },
+      { name: "Pandas", color: "white" },
+    ],
+  },
+  {
+    bg: "teal.400",
+    title: "Sorting Visualiser",
+    desc:
+      "This is a Sorting Visualiser built with React. The algorithms that were used: Quick Sort, Merge Sort, Insertion Sort, and Bubble Sort.",
+    githubLink: "https://github.com/henryboisdequin/Sorting-Visualiser",
+    imageLink:
+      "https://raw.githubusercontent.com/henryboisdequin/Sorting-Visualiser/master/visual.png",
+    icons: [
+      { name: "React.js", color: "blue.300" },
+      { name: "Javascript", color: "yellow.400" },
+    ],
+  },
+  {
+    bg: "teal.400",
+    title: "AI Draws Numbers",
+    desc:
+      "Created an GAN neural network this Tensorflow 2 that can draw numbers using the MNIST digit dataset.",
+    githubLink: "https://github.com/henryboisdequin/AI-Draws-Numbers",
+
+    imageLink: "/assets/ai_draws.png",
+    icons: [
+      { name: "Juypter Notebook", color: "blue.300" },
+      { name: "Tensorflow", color: "green.400" },
+      { name: "Numpy", color: "purple.300" },
+      { name: "Pandas", color: "white" },
+      { name: "Keras", color: "orange.400" },
     ],
   },
 ];

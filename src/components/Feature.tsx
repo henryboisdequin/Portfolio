@@ -54,7 +54,7 @@ export function Feature({ title, desc, image, icons, bg, github }) {
               return (
                 <Box
                   mr={5}
-                  width="25%"
+                  width="auto" //"25%"
                   bottom="auto"
                   bg={v.color}
                   borderRadius={10}
@@ -71,8 +71,14 @@ export function Feature({ title, desc, image, icons, bg, github }) {
             })}
           </Flex>
         </Box>
-        <Box>
-          <Image src={image} borderRadius={10} shadow="md" alt={image}></Image>
+        <Box maxWidth={800}>
+          <Image
+            src={image}
+            borderRadius={10}
+            shadow="md"
+            alt={image}
+            width="auto"
+          ></Image>
         </Box>
       </Flex>
     </Box>
