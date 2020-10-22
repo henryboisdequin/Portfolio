@@ -11,8 +11,7 @@ const projects: Array<object> = [
     desc:
       "A fullstack blog site combing some features of Reddit and Medium. I used a frontend of Next.js, Chakra-ui, React.js, and URQL. A backend of Typeorm, GraphQL/TypeGraphQL, and Node.js.",
     githubLink: "https://github.com/henryboisdequin/Blog",
-    imageLink:
-      "https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5babef3da7ea4342a948c024%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1314%26cropX2%3D2845%26cropY1%3D222%26cropY2%3D1752",
+    imageLink: "/assets/blog.png",
     icons: [
       { name: "Typescript", color: "blue.300" },
       { name: "Next.js", color: "white" },
@@ -22,10 +21,10 @@ const projects: Array<object> = [
     ],
   },
   {
-    bg: "teal.400",
+    bg: "orange.300",
     title: "AI Stock Trader",
     desc:
-      "Created an DQN AI Agent which chooses to sell, buy, or keep stocks from various companies. This DQN AI Agent is built using Tensorflow, Numpy, Pandas, and the reinforcement learning algorithm.",
+      "Created a DQN AI Agent which chooses to sell, buy, or keep stocks from various companies. This DQN AI Agent is built using Tensorflow, Numpy, Pandas, and the reinforcement learning algorithm.",
     githubLink: "https://github.com/henryboisdequin/AI-Stock-Trader",
     imageLink:
       "https://raw.githubusercontent.com/henryboisdequin/AI-Stock-Trader/master/test.png",
@@ -37,7 +36,7 @@ const projects: Array<object> = [
     ],
   },
   {
-    bg: "teal.400",
+    bg: "purple.400",
     title: "Sorting Visualiser",
     desc:
       "This is a Sorting Visualiser built with React. The algorithms that were used: Quick Sort, Merge Sort, Insertion Sort, and Bubble Sort.",
@@ -50,10 +49,10 @@ const projects: Array<object> = [
     ],
   },
   {
-    bg: "teal.400",
+    bg: "green.500",
     title: "AI Draws Numbers",
     desc:
-      "Created an GAN neural network this Tensorflow 2 that can draw numbers using the MNIST digit dataset.",
+      "Created a GAN neural network this Tensorflow 2 that can draw numbers using the MNIST digit dataset.",
     githubLink: "https://github.com/henryboisdequin/AI-Draws-Numbers",
 
     imageLink: "/assets/ai_draws.png",
@@ -75,8 +74,13 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
       <Box mt={10}>
         <Heading mb={4}>Projects</Heading>
         <Flex flexDirection="column">
-          {projects.map((v) => {
-            return <Card project={v as any}></Card>;
+          {projects.map((v: any) => {
+            return (
+              <Card
+                key={Math.floor(Math.random() * 10 * v.desc.length)}
+                project={v as any}
+              ></Card>
+            );
           })}
         </Flex>
       </Box>

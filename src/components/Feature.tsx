@@ -53,6 +53,7 @@ export function Feature({ title, desc, image, icons, bg, github }) {
             {icons.map((v: { color: string; name: string }) => {
               return (
                 <Box
+                  key={Math.floor(Math.random() * 10 * v.name.length)}
                   mr={5}
                   width="auto" //"25%"
                   bottom="auto"

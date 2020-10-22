@@ -6,7 +6,7 @@ interface FooterProps {}
 export const FooterItem: React.FC<{ itemArray: any }> = ({ itemArray }) => {
   return itemArray.map((item: { href: string; src: string }) => {
     return (
-      <Box ml={2}>
+      <Box ml={2} key={Math.floor(item.src.length * 10 * Math.random())}>
         <Link>
           <a target="_blank" href={item.href}>
             <Image src={item.src} size="30px" />
