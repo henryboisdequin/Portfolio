@@ -60,7 +60,7 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
             <MenuItems>Contact</MenuItems>
           </Link>
         </a>
-        <NextLink href="/blog/home">
+        <NextLink href="/blog">
           <Link>
             <MenuItems>Blog</MenuItems>
           </Link>

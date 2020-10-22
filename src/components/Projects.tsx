@@ -17,6 +17,7 @@ const projects: Array<object> = [
       { name: "GraphQL", color: "pink.300" },
       { name: "PostgreSQL", color: "orange.300" },
       { name: "URQL", color: "green.400" },
+      { name: "Redis", color: "red.400" },
     ],
   },
   {

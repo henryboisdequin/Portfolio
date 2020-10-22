@@ -1,7 +1,7 @@
 import React from "react";
-import { useDevAPI } from "../../../utils/useDevAPI";
-import { ArticleCard } from "../../components/ArticleCard";
-import { Layout } from "../../components/Layout";
+import { useDevAPI } from "../../utils/useDevAPI";
+import { ArticleCard } from "../components/ArticleCard";
+import { Layout } from "../components/Layout";
 
 interface HomeProps {}
 
