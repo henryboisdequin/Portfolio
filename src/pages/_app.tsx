@@ -4,12 +4,14 @@ import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <ColorModeProvider>
-        <CSSReset />
-        <Component {...pageProps} />
-      </ColorModeProvider>
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <ColorModeProvider>
+          <CSSReset />
+          <Component {...pageProps} />
+        </ColorModeProvider>
+      </ThemeProvider>
+    </>
   );
 }
 

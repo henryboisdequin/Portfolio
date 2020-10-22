@@ -40,6 +40,10 @@ export const Footer: React.FC<FooterProps> = ({}) => {
               href: "https://github.com/henryboisdequin",
               src: "/assets/github.png",
             },
+            {
+              href: "https://stackoverflow.com/users/13753914/henry",
+              src: "/assets/stack.png",
+            },
           ]}
         />
       </Flex>
