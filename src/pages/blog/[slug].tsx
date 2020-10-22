@@ -15,7 +15,6 @@ const Blog: React.FC<{}> = () => {
   } else if (!isLoaded || articles === undefined) {
     return <div>loading...</div>;
   } else {
-    console.log(articles);
     return (
       <Box>
         <Layout />

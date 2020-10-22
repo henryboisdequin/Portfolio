@@ -1,14 +1,37 @@
 import React from "react";
+import { useDevAPI } from "../../../utils/useDevAPI";
+import { ArticleCard } from "../../components/ArticleCard";
 import { Layout } from "../../components/Layout";
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = ({}) => {
-  return (
-    <Layout>
-      <h1>I am blog</h1>
-    </Layout>
-  );
+  const [articles, error, isLoaded] = useDevAPI();
+
+  if (error) {
+    return <div>{error}</div>;
+  } else if (!isLoaded || articles === undefined) {
+    return <div>loading...</div>;
+  } else {
+    return (
+      <Layout>
+        {articles.map((article: any) => {
+          return (
+            <ArticleCard
+              article={article}
+              key={Math.floor(
+                Math.random() *
+                  10 *
+                  new Array(10).fill(Math.random() * 10)[
+                    Math.floor(Math.random() * 9)
+                  ]
+              )}
+            />
+          );
+        })}
+      </Layout>
+    );
+  }
 };
 
 export default Home;

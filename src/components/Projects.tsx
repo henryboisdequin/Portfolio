@@ -1,11 +1,10 @@
 import React from "react";
 import { Container } from "./Container";
 import { Box, Flex, Heading } from "@chakra-ui/core";
-import { Card } from "./Card";
+import { Card } from "./ProjectCard";
 
 const projects: Array<object> = [
   {
-    //   TODO: add blog picture
     bg: "teal.400",
     title: "Blog",
     desc:
