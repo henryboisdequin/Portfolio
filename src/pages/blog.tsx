@@ -1,3 +1,4 @@
+import { CircularProgress, Flex } from "@chakra-ui/core";
 import React from "react";
 import { useDevAPI } from "../../utils/useDevAPI";
 import { ArticleCard } from "../components/ArticleCard";
@@ -11,7 +12,11 @@ const Home: React.FC<HomeProps> = ({}) => {
   if (error) {
     return <div>{error}</div>;
   } else if (!isLoaded || articles === undefined) {
-    return <div>loading...</div>;
+    return (
+      <Flex justifyContent="center" alignItems="center">
+        <CircularProgress isIndeterminate size="120px" />
+      </Flex>
+    );
   } else {
     return (
       <Layout>
