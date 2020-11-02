@@ -3,10 +3,18 @@ import { Link, Image, Flex, Box, useColorMode } from "@chakra-ui/core";
 
 interface FooterProps {}
 
-export const FooterItem: React.FC<{ itemArray: any }> = ({ itemArray }) => {
+export const FooterItem: React.FC<{ itemArray: any; bg: string }> = ({
+  itemArray,
+  bg,
+}) => {
   return itemArray.map((item: { href: string; src: string }) => {
     return (
-      <Box ml={2} key={Math.floor(item.src.length * 10 * Math.random())}>
+      <Box
+        borderRadius={4}
+        ml={2}
+        key={Math.floor(item.src.length * 10 * Math.random())}
+        bg={bg}
+      >
         <Link>
           <a target="_blank" href={item.href}>
             <Image src={item.src} size="30px" />
@@ -21,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box mt={10} bg={colorMode === "dark" ? "white" : undefined}>
+    <Box mt={10}>
       <Flex
         textAlign="center"
         alignItems="center"
@@ -30,11 +38,14 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         boxSizing="border-box"
         width="1200px"
         maxWidth="100%"
-        borderTop={colorMode === "light" ? "2px solid #a19f9c" : "2px solid"}
+        borderTop={
+          colorMode === "light" ? "2px solid #a19f9c" : "2px solid white"
+        }
         marginTop="80px"
         margin="auto"
       >
         <FooterItem
+          bg="white"
           itemArray={[
             {
               href: "https://github.com/henryboisdequin",
