@@ -14,12 +14,16 @@ export const FooterItem: React.FC<{ itemArray: any; bg: string }> = ({
         ml={2}
         key={Math.floor(item.src.length * 10 * Math.random())}
         bg={bg}
+        height={10}
+        width={10}
       >
-        <Link>
-          <a target="_blank" href={item.href}>
-            <Image src={item.src} size="30px" />
-          </a>
-        </Link>
+        <Flex justifyContent="center" alignItems="center" mt={1}>
+          <Link>
+            <a target="_blank" href={item.href}>
+              <Image src={item.src} size="30px" />
+            </a>
+          </Link>
+        </Flex>
       </Box>
     );
   });

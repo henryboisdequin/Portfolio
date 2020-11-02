@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Flex } from "@chakra-ui/core";
+import { CircularProgress, Flex } from "@chakra-ui/core";
 import React from "react";
 import { useDevAPI } from "../../utils/useDevAPI";
 import { ArticleCard } from "../components/ArticleCard";
