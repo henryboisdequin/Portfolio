@@ -5,7 +5,7 @@ export const DarkModeSwitch = () => {
   return (
     <IconButton
       icon={colorMode === "dark" ? "moon" : "sun"}
-      color={colorMode === "light" ? "teal.500" : "black"}
+      color={colorMode === "light" ? "teal.500" : "white"}
       aria-label="Toggle color mode"
       onClick={toggleColorMode}
     />

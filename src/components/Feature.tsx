@@ -3,9 +3,9 @@ import {
   Flex,
   Heading,
   Image,
+  Link,
   Text,
   useColorMode,
-  Link,
 } from "@chakra-ui/core";
 import React from "react";
 

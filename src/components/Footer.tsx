@@ -1,5 +1,5 @@
+import { Box, Flex, Image, Link, useColorMode } from "@chakra-ui/core";
 import React from "react";
-import { Link, Image, Flex, Box, useColorMode } from "@chakra-ui/core";
 
 interface FooterProps {}
 
