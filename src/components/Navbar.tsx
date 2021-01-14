@@ -65,6 +65,11 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
             <MenuItems>Blog</MenuItems>
           </Link>
         </NextLink>
+        <a target="_blank" href="https://buttondown.email/hb">
+          <Link>
+            <MenuItems>Newsletter</MenuItems>
+          </Link>
+        </a>
       </Box>
       <Box
         display={{ sm: show ? "block" : "none", md: "block" }}
